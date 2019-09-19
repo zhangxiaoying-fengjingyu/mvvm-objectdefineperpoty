@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" v-model='defaultValue'>
+        <div>{{defaultValue}}</div>
+        <div>{{obj.name}}</div>
+    </div>
+    
+    <script src="./mvvmPractice.js"></script>
+    <script>
+     
+     const res = new Mvvm({
+         el: 'box',
+         data: {
+            defaultValue: 'Bom',
+            obj: {
+                name: 'Mary'
+            }
+         },
+     })
+    </script>
+</body>
+</html>

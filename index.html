@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" v-model='obj.name'>
+        <div>{{defaultValue}}</div>
+        <div>{{obj.name}}</div>
+    </div>
+    <script src="./mvvm.js"></script>
+    <script>
+        //
+        // let obj = {
+        //     name: 'bom'
+        // }
+        // Object.defineProperty(obj,'name',{
+        //     get(){
+        //         return 'zhangxiaoying'
+        //     },
+        //     set(newValue){
+        //         console.log('----newValue------',newValue)
+        //     }
+        // })
+        // obj.name = 'Mary'
+        // console.log(obj.name)
+
+        let res = new Mvvm({
+            el: 'box',
+            data: {
+                defaultValue: 'Tom',
+                obj: {
+                    name: 'Gina'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
